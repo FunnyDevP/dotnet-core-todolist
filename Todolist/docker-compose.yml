@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: postgres:14.0-alpine
+    container_name: book_store_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: todolist_user
+      POSTGRES_PASSWORD: todolist_pass
+      POSTGRES_DB: example_db
+    restart: always
